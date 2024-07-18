@@ -1,0 +1,4 @@
+en:
+  translation:
+    count_is: Count is {{count}}
+    title: Atlas React SPA template

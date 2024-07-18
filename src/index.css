@@ -1,0 +1,4 @@
+/* Note: This is just an example. Please consult with designers to determine if a different font is required for non-English languages.*/
+html:lang(zh) body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, 黑體-繁, 'Heiti TC', 儷黑Pro, 'LiHei Pro', PMingLiu, 宋体, SimSun;
+}
