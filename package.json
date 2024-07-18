@@ -5,7 +5,7 @@
   "type": "module",
   "engines": {
     "pnpm": ">=8.0.0",
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "dev": "vite",
@@ -20,9 +20,10 @@
   },
   "dependencies": {
     "@acl-services/jwt-highbond-client": "^1.1.6",
-    "@diligentcorp/atlas-theme-mui": "^0.15.3",
+    "@diligentcorp/atlas-theme-mui": "0.19.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.0.21",
     "@mui/material": "^5.13.7",
     "@tanstack/react-query": "^4.29.19",
     "i18next": "^23.2.8",

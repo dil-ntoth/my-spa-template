@@ -9,14 +9,17 @@ dependencies:
     specifier: ^1.1.6
     version: 1.1.6(aws-sdk@2.1413.0)(fastify-plugin@3.0.1)(fastify@4.19.2)
   '@diligentcorp/atlas-theme-mui':
-    specifier: ^0.15.3
-    version: 0.15.3(react-dom@18.2.0)(react@18.2.0)
+    specifier: 0.19.2
+    version: 0.19.2(@mui/material@5.13.7)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
   '@emotion/react':
     specifier: ^11.11.1
     version: 11.11.1(@types/react@18.2.14)(react@18.2.0)
   '@emotion/styled':
     specifier: ^11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.2.0)
+  '@fontsource-variable/plus-jakarta-sans':
+    specifier: ^5.0.21
+    version: 5.0.21
   '@mui/material':
     specifier: ^5.13.7
     version: 5.13.7(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
@@ -1617,6 +1620,13 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
 
+  /@babel/runtime@7.24.8:
+    resolution: {integrity: sha512-5F7SDGs1T72ZczbRwbGO9lQi0NLjQxzl6i4lJxLxfW9U5UluCSyEJeniWvnhl3/euNiqQVbo8zruhsDfid0esA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
+    dev: false
+
   /@babel/template@7.22.5:
     resolution: {integrity: sha512-X7yV7eiwAxdj9k94NEylvbVHLiVG1nvzCV2EAowhxLTwODV1jl9UzZ48leOC0sH7OnuHrIkllaBgneUykIcZaw==}
     engines: {node: '>=6.9.0'}
@@ -1656,34 +1666,39 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@diligentcorp/atlas-design-tokens@0.17.2:
-    resolution: {integrity: sha512-zkw6mONqCEy5Wi1YAumJb4AIn38Ewgx5uxnyZQINKN9kxdOOFXE08p0KYKg947uz+1EzahP6Cc6JiHN7YQr3mA==, tarball: https://npm.pkg.github.com/download/@DiligentCorp/atlas-design-tokens/0.17.2/e9aae5db30a825d9406c504430992e1eeec0e425}
+  /@diligentcorp/atlas-design-tokens@0.27.7:
+    resolution: {integrity: sha512-ldqEDImiQYlaii16gHeostclPJiyE1UIpzVxcM6tdTw+YzVPKbZ12R0BXVvDYewHjG+5Qku2HuiK+3X4cPW6JQ==, tarball: https://npm.pkg.github.com/download/@DiligentCorp/atlas-design-tokens/0.27.7/46b68299bab8f0771ddae1594b4dda13ecb7d386}
     dev: false
 
-  /@diligentcorp/atlas-react-icons@0.1.23(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-kAMPWbZegdRWWa5f1244RJGp+Is4zlkMzkbuGU7z9E6MPexg4V48iqx41BTlbb/hne8fCCJ0mvdFZcVsWhp5Gg==, tarball: https://npm.pkg.github.com/download/@DiligentCorp/atlas-react-icons/0.1.23/5d5bb72bda41bd145764fc110cfd3797cafccd19}
+  /@diligentcorp/atlas-react-icons@0.6.9(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-6DaO+/fCywm8vWVKRVovKs3/lQR5kcKYemnxvj4KZR0DmIU17i9jJACn3aBJgkln+AgYwj8lqcSGjXKjc3oy8g==, tarball: https://npm.pkg.github.com/download/@DiligentCorp/atlas-react-icons/0.6.9/c07a3fd597b90fa61325193b37bbbf74d09fed6e}
     peerDependencies:
       react: ^16.14.0 || >=17.0.2 <18.0.0 || >=18.0.0 <19.0.0
       react-dom: ^16.14.0 || >=17.0.0 <18.0.0 || >=18.0.0 <19.0.0
     dependencies:
-      '@diligentcorp/atlas-design-tokens': 0.17.2
+      '@diligentcorp/atlas-design-tokens': 0.27.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@diligentcorp/atlas-theme-mui@0.15.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-yol5t4HN1O0YorupFQrKAJbHwMXbMpW9hvd3IWiXDMKV051M9Myc1KhOY+RGT0GxNFCKOUhkHRJAvzkgpunPew==, tarball: https://npm.pkg.github.com/download/@DiligentCorp/atlas-theme-mui/0.15.3/32f472440dd0164d0c33790fb571e1d8b9409fbe}
+  /@diligentcorp/atlas-theme-mui@0.19.2(@mui/material@5.13.7)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-2Cs4KBoJF14r1ahyXD51BBtlK98nfuBNf+56Ok2Y1w09h1JcBZedcUQzK0r65iCF+GC9Ui8kXcQ7n0f4vfPxlA==, tarball: https://npm.pkg.github.com/download/@DiligentCorp/atlas-theme-mui/0.19.2/ce26395e8d906105259f297c26f7059c05865281}
     peerDependencies:
       react: ^16.14.0 || >=17.0.2 <18.0.0 || >=18.0.0 <19.0.0
       react-dom: ^16.14.0 || >=17.0.0 <18.0.0 || >=18.0.0 <19.0.0
     dependencies:
-      '@diligentcorp/atlas-design-tokens': 0.17.2
-      '@diligentcorp/atlas-react-icons': 0.1.23(react-dom@18.2.0)(react@18.2.0)
-      '@fontsource/source-sans-pro': 4.5.11
+      '@diligentcorp/atlas-design-tokens': 0.27.7
+      '@diligentcorp/atlas-react-icons': 0.6.9(react-dom@18.2.0)(react@18.2.0)
+      '@fontsource-variable/plus-jakarta-sans': 5.0.21
+      '@fontsource/source-sans-pro': 5.0.8
+      '@mui/icons-material': 5.16.4(@mui/material@5.13.7)(@types/react@18.2.14)(react@18.2.0)
       '@react-hook/window-size': 3.1.1(react@18.2.0)
       lodash.chunk: 4.2.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@mui/material'
+      - '@types/react'
     dev: false
 
   /@emotion/babel-plugin@11.11.0:
@@ -2059,8 +2074,12 @@ packages:
       fast-json-stringify: 5.7.0
     dev: false
 
-  /@fontsource/source-sans-pro@4.5.11:
-    resolution: {integrity: sha512-f7iw44q1EjBv3MNcHCGAgrW/QVyweaEouFsJzykPhTOGnZFSwFJRISToXornOmuAy7xUUGiVdqOLiykgZoYB8A==}
+  /@fontsource-variable/plus-jakarta-sans@5.0.21:
+    resolution: {integrity: sha512-VTQB+MnaYbjLNmfxQJ/Fc2rayLGlqTiZa6nZTpplS0lJF3XKcWPPItilGFMZW4lfwIiroo+FIfBewBOF3MrMPQ==}
+    dev: false
+
+  /@fontsource/source-sans-pro@5.0.8:
+    resolution: {integrity: sha512-5U2UvIYRkCMozZ388gCE73PEpa2MFgN/0t9O4a1FF7bGT/MIneQWSL1XpWZ8iMVYdh6ntxRf3iFA6slCIuFgkg==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
@@ -2211,6 +2230,23 @@ packages:
 
   /@mui/core-downloads-tracker@5.13.7:
     resolution: {integrity: sha512-/suIo4WoeL/OyO3KUsFVpdOmKiSAr6NpWXmQ4WLSxwKrTiha1FJxM6vwAki5W/5kR9WnVLw5E8JC4oHHsutT8w==}
+    dev: false
+
+  /@mui/icons-material@5.16.4(@mui/material@5.13.7)(@types/react@18.2.14)(react@18.2.0):
+    resolution: {integrity: sha512-j9/CWctv6TH6Dou2uR2EH7UOgu79CW/YcozxCYVLJ7l03pCsiOlJ5sBArnWJxJ+nGkFwyL/1d1k8JEPMDR125A==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.0.0
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.24.8
+      '@mui/material': 5.13.7(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': 18.2.14
+      react: 18.2.0
     dev: false
 
   /@mui/material@5.13.7(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0):
@@ -6150,6 +6186,10 @@ packages:
 
   /regenerator-runtime@0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
+
+  /regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+    dev: false
 
   /regenerator-transform@0.15.1:
     resolution: {integrity: sha512-knzmNAcuyxV+gQCufkYcvOqX/qIIfHLv0u5x79kRxuGojfYVky1f15TzZEu2Avte8QGepvUNTnLskf8E6X6Vyg==}
