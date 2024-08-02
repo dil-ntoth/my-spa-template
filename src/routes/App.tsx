@@ -1,10 +1,10 @@
-import { Link, Outlet } from 'react-router-dom';
-import { Box, Link as MUILink } from '@mui/material';
+import { Outlet } from 'react-router-dom';
+import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import GlobalNavigator from '../components/GlobalNav/GlobalNav';
 import { useSession } from '../hooks/queries/useSession';
 import React from 'react';
-import { Button, ButtonGroup, Drawer, Typography, useTheme, TextField } from '@mui/material';
+import { Button, Drawer, Typography, useTheme, TextField } from '@mui/material';
 import type { LensTheme } from '@diligentcorp/atlas-theme-mui/lib/themes/lens/types';
 
 import './App.css';
@@ -12,28 +12,47 @@ import './App.css';
 function App() {
   const { t } = useTranslation();
   const { data: session } = useSession();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
 
+  const [onBlurValue, setOnBlurValue] = React.useState(0);
+
   const theme = useTheme<LensTheme>();
 
-  if (theme.atlasThemeName !== 'lens') return <ThemeDisclaimer />;
-
   const SideSheetPresets = theme.presets.SideSheetPresets;
-  const { size, components } = SideSheetPresets;
+  const { components } = SideSheetPresets;
   const { Header, Content, Footer } = components;
 
   const DrawerExample = (
     <>
       <Header
         onClose={toggleDrawer(!open)}
-        titleText="Title"
+        titleText="Drawer tester"
         closeButtonProps={{ 'aria-label': 'Close side sheet', 'aria-controls': 'sideSheetId' }}
       />
-      <Typography variant="h3">hello</Typography>
-      <TextField name="asd" inputProps={{ onBlur: () => console.log('unblur event fired') }} />
+      <Content>
+        <Typography variant="h5">Blur value: {onBlurValue}</Typography>
+        <TextField
+          sx={{ width: '450px', p: 0.3, mt: 1 }}
+          name="textfield"
+          inputProps={{
+            onBlur: () => {
+              setOnBlurValue(onBlurValue + 1);
+              console.log('onBlur event fired');
+            },
+          }}
+        />
+      </Content>
+      <Footer>
+        <Button variant="outlined" onClick={() => setOpen(false)}>
+          Close
+        </Button>
+        <Button variant="contained" onClick={() => setOpen(false)}>
+          Apply
+        </Button>
+      </Footer>
     </>
   );
 
@@ -46,14 +65,15 @@ function App() {
           <code>{JSON.stringify(session)}</code>
         </Box>
         <Box>
-          <MUILink component={Link} to="/counter">
-            Show Counter example
-          </MUILink>
-        </Box>
-        <Box>
-          <MUILink component={Link} to="/cards">
-            Show Cards example
-          </MUILink>
+          <Button
+            sx={{ mt: 12 }}
+            variant="contained"
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            Open Drawer
+          </Button>
         </Box>
         <Drawer open={open} onClose={toggleDrawer(!open)}>
           {DrawerExample}

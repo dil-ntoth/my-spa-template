@@ -29,24 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <SPAWrapper>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<App />}>
-              <Route
-                path="counter"
-                element={
-                  <React.Suspense fallback={<>Loading Counter</>}>
-                    <Counter />
-                  </React.Suspense>
-                }
-              />
-              <Route
-                path="cards"
-                element={
-                  <React.Suspense fallback={<>Loading Cards</>}>
-                    <Cards />
-                  </React.Suspense>
-                }
-              />
-            </Route>
+            <Route path="/" element={<App />}></Route>
           </Routes>
         </BrowserRouter>
       </SPAWrapper>
